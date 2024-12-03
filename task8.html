@@ -9,6 +9,7 @@
 
 
 <body>
+    
     <div class="tasks">
         <a href="task2.html">Завдання 2</a>
         <p></p>
@@ -24,6 +25,41 @@
         <p></p>
         <a href="task10.html">Завдання 10</a>
     </div>
+
+    <div class="background8">
+        <h3>Завдання 8</h3>
+    <form class="login-form">
+        <label> Email <input type="email" name="email" /> </label>
+        <label> Password <input type="password" name="password" /> </label>
+        <button type="submit">Log in</button>
+    </form>
+    </div>
+
+<script>
+ 
+const form = document.querySelector('.login-form');
+
+form.addEventListener('submit', event => {
+
+  event.preventDefault();
+  const email = form.elements.email;
+  const password = form.elements.password;
+
+  if (email.value.trim() === '' || password.value.trim() === '') {
+    alert('All form fields must be filled in');
+    return;
+  }
+
+  const formData = {
+    email: email.value.trim(),
+    password: password.value.trim(),
+  };
+
+  console.log(formData);
+  form.reset();
+});
+
+</script>
 
 
 </body>
