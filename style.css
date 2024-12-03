@@ -41,6 +41,12 @@ h3{
     border: 3px dashed red;
     margin: 0 auto 15px auto;
   }
+
+  ul {
+    margin: 20px auto;
+    width: 200px;
+    text-align: left;
+  }
   
 
   

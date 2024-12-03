@@ -25,6 +25,35 @@
         <a href="task10.html">Завдання 10</a>
     </div>
 
+    <div class="background">
+        <h3>Завдання 6</h3>
+        <ul id="list">
+            <li>1</li>
+            <li>4</li>
+            <li>8</li>
+            <li>16</li>
+            <li>20</li>
+            <li>30</li>
+          </ul>
+       <button id="button">Подвоїти</button>
+
+    </div>
+
+<script>
+
+const list = document.getElementById("list");
+const button = document.getElementById("button");
+
+button.addEventListener("click", () => {
+
+  const listItems = list.querySelectorAll("li");
+  listItems.forEach(item => {
+    item.textContent = Number(item.textContent) * Number(item.textContent);
+  });
+});
+
+</script>
+
 
 </body>
 </html>
