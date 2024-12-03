@@ -27,18 +27,30 @@
 
     <div class="background">
         <h3>Завдання 4</h3>
-       <div></div>
-       
+       <div id="square"></div>
+       <button id="decrease">Зменшити</button>
+       <button id="increase">Збільшити</button>
+
     </div>
                
 <script>
 
-  document.getElementById("button").addEventListener("click", () => {
-  const text = document.getElementById("input");
-  text.textContent='Розкрити'
+const square = document.getElementById("square");
+const decrease = document.getElementById("decrease");
+const increase = document.getElementById("increase");
+ 
+let size = 100;
 
+function resizeSquare(change) {
+  size += change;
+  if (size < 15) size = 15;
+  square.style.width = size + "px";
+  square.style.height = size + "px";
+}
 
-});
+decrease.addEventListener("click", () => resizeSquare(-15));
+increase.addEventListener("click", () => resizeSquare(15));
+
 
 </script>
 
